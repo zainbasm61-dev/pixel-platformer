@@ -1,0 +1,194 @@
+{
+  "stage_id": "babylon_l1_gardens",
+  "stage_index": 1,
+  "title": "الطابق الأول — الجنائن المعلّقة",
+  "opening_line": "بابل بعدها خضرة… بس البرج صار يغطي الشمس.",
+  "exit_line": "الجنائن خلصت. من هنا يبدأ الحجر والنار.",
+  "next_stage_id": "babylon_l2_foundations",
+  "next_stage_title": "الطابق الثاني — أساسات النار",
+  "story_version": "v2",
+  "story_note": "L1 lines copied into this level contract. The story document is not added or edited.",
+  "tile_size": 16,
+  "map_size": [
+    140,
+    26
+  ],
+  "signs": [
+    {
+      "id": "gardens_sign_01",
+      "index": 1,
+      "x": 18,
+      "y": 19,
+      "glyph": "1",
+      "purpose": "before_safe_water_crossing",
+      "text": "الشلالات تنزل من الجنائن للفرات. اقفز على الصخور، المي بارد.",
+      "unlocks_ability": false
+    },
+    {
+      "id": "gardens_sign_02",
+      "index": 2,
+      "x": 36,
+      "y": 19,
+      "glyph": "2",
+      "purpose": "before_turquoise_route_marker",
+      "text": "شريط فيروزي على الغصن… هذي إشارتها.",
+      "unlocks_ability": false
+    },
+    {
+      "id": "gardens_sign_03",
+      "index": 3,
+      "x": 44,
+      "y": 19,
+      "glyph": "3",
+      "purpose": "before_clay_unlock_training",
+      "text": "الطين يطيعني. أبني منصة وأعبر.",
+      "unlocks_ability": false
+    },
+    {
+      "id": "gardens_sign_04",
+      "index": 4,
+      "x": 68,
+      "y": 19,
+      "glyph": "4",
+      "purpose": "before_first_guard",
+      "text": "حرس النمرود يدورون بين الأشجار. خليك فوقهم.",
+      "unlocks_ability": false
+    }
+  ],
+  "ribbon": {
+    "id": "princess_ribbon_l1",
+    "x": 93,
+    "y": 14,
+    "glyph": "R",
+    "text": "إذا لگيت هذا، يعني بعدك تحاول. لا توقف.",
+    "optional": true,
+    "required_for_exit": false,
+    "required_for_clay": false,
+    "visual_class": "hanging_ribbon"
+  },
+  "route_guides": [
+    {
+      "id": "route_branch_01",
+      "x": 38,
+      "y": 17,
+      "glyph": "t",
+      "visual_class": "branch_band"
+    },
+    {
+      "id": "route_branch_02",
+      "x": 108,
+      "y": 17,
+      "glyph": "t",
+      "visual_class": "branch_band"
+    }
+  ],
+  "clay_pickup": {
+    "id": "clay_platform",
+    "x": 48,
+    "y": 19,
+    "glyph": "K",
+    "draft_size_px": [
+      32,
+      16
+    ],
+    "draft_lifetime_sec": 4.0,
+    "draft_charges": 1,
+    "draft_restore": "real_ground_only",
+    "contract_status": "draft_not_implemented"
+  },
+  "provisional_clay_ghosts": [
+    {
+      "x": 52,
+      "y": 18
+    },
+    {
+      "x": 53,
+      "y": 18
+    }
+  ],
+  "spawn": {
+    "x": 2,
+    "y": 19,
+    "glyph": "P"
+  },
+  "exit": {
+    "x": 137,
+    "y": 15,
+    "glyph": "E"
+  },
+  "checkpoints": [
+    {
+      "id": "cp_opening",
+      "x": 8,
+      "y": 19
+    },
+    {
+      "id": "cp_before_guard",
+      "x": 60,
+      "y": 19
+    },
+    {
+      "id": "cp_before_hazard",
+      "x": 110,
+      "y": 19
+    },
+    {
+      "id": "cp_terrace",
+      "x": 134,
+      "y": 15
+    }
+  ],
+  "guard": {
+    "id": "gardens_guard_01",
+    "x": 74,
+    "y": 19,
+    "glyph": "G",
+    "taunt": "الجنائن للنمرود!",
+    "defeat_line": "...الشلال أخذ ترسي."
+  },
+  "spikes": [
+    {
+      "x": 119,
+      "y": 20
+    },
+    {
+      "x": 120,
+      "y": 20
+    },
+    {
+      "x": 121,
+      "y": 20
+    }
+  ],
+  "hero": {
+    "expected_root": "res://gameplay/babylon/",
+    "present_in_repo": false,
+    "do_not_instance": "res://player/player.tscn",
+    "forbidden_assumptions": [
+      "double_jump",
+      "wall_jump",
+      "pogo",
+      "stomp",
+      "sword",
+      "dash",
+      "reflect"
+    ]
+  },
+  "enemies": {
+    "expected_root": "res://enemies/babylon/"
+  },
+  "ui": {
+    "expected_root": "res://ui/babylon/",
+    "ability_signal": "ability_requested",
+    "connection": "connect_once_direct_to_ability_request_do_not_also_synth_input",
+    "wired_in_this_scene": false
+  },
+  "movement": {
+    "run_speed_px_estimate": 130,
+    "single_jump_px_estimate": 48,
+    "estimates_tested_with_hero": false,
+    "required_route_max_step_tiles": 1,
+    "optional_route_max_step_tiles": 2,
+    "mandatory_clay_gap": false
+  }
+}

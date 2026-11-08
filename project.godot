@@ -1,0 +1,27 @@
+; Manual launcher for the Babylon gardens blockout only.
+; The published game is still the web export (index.html / index.pck).
+; This file does not replace that export, the legacy levels, or the legacy player.
+
+config_version=5
+
+[application]
+
+config/name="Babylon Gardens Blockout"
+config/description="Inspection scene for res://levels/babylon. Not the published game."
+run/main_scene="res://levels/babylon/gardens_level.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+
+[display]
+
+window/size/viewport_width=480
+window/size/viewport_height=270
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.72, 0.89, 0.78, 1)
